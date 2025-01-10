@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Mahanantham's Portfolio</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <marquee width="30%" direction="horizontal" height="100px">
+                    <h1 style="color: crimson;"> HI </span> <span style="color: crimson;"> WELCOME !</span></h1>
+                </marquee>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h2 style="color:black;"><u>FRONTEND DEVELOPER</u></h2>
+                <h1 style="color:black;">Hi I am <span style="color: crimson;">
+                        <!-- <marquee width="60%" direction="up" height="50px">Mahanantham</marquee> -->Mahanantham
+                    </span> <br>from Aceteck.</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="maha photo.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title" style="color:crimson;"><u>About me</u></h1>
+                    <p style="margin-top: 20px;margin-bottom: 20px;"> Hi, I'm Mahanantham N, a passionate frontend
+                        developer skilled in HTML, CSS, JavaScript, and React.
+                        I enjoy building user-friendly and visually appealing web applications. My goal is to create
+                        seamless
+                        digital experiences that not only function efficiently but also delight users. With a strong
+                        foundation
+                        in web technologies, I am eager to take on challenges and grow as a developer while contributing
+                        to impactful projects.
+                    </p>
+                    </p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">SKILLS</p>
+                        <p class="tab-links" onclick="opentab('education')">EDUCATION </p>
+                        <p class="tab-links" onclick="opentab('projects')">PROJECTS</p>
+                        <p class="tab-links" onclick="opentab('additional')">ADDITIONAL</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>SASS</li>
+                            <li>JAVA SCRIPT</li>
+                            <li>REACT</li>
+                            <li>PYTHON</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017-2018</span><br>Completed SSLC with 91%</li>
+                            <li><span>2019-2020</span><br>Completed HSC with 65%</li>
+                            <li><span>2020-2024</span><br>Completed B.E with 8.48 CGPA</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span><u>AUTONOMOUS LAWN MOWER USING GPS</u></span><br>Field by using gps technology
+                                grass are
+                                cutted by lawn mower and vacuuming the cutted grass to be unloaded in a particular
+                                location.</li>
+                            <li><span><u>CLOUD AND FOG COMBINED GATEWAY ACCESS CONTROL FOR SECURE DATA
+                                        DISTRIBUTION</u></span><br>Developed a secure healthcare data sharing system
+                                using ECC
+                                encryption, a duplicate detection mechanism, and a two-server architecture to ensure
+                                privacy, data integrity, and controlled access in the cloud.</li>
+                            <li><span><u>E-COMMERCE PLATFORM WITH USER AUTHENTICATION</u></span><br>A React-based
+                                e-commerce site
+                                featuring user registration, login, product filtering, and a shopping cart. It provides
+                                a
+                                responsive and interactive shopping experience with essential features for online
+                                shopping.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="additional">
+                        <ul>
+                            <li>SQL programming with my sql-<span><u>Udemy</u></span>.</li>
+                            <li>Google data analytics course-<span><u>Coursera</u></span></li>
+                            <li>Completed course in Introduction to 3D Printing and CAD Modeling </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title" style="color:crimson;"><u>My Services</u></h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-link"></i>
+                    <h2>Web Design</h2>
+                    <p>Crafting visually appealing and user-friendly interfaces that enhance user engagement,
+                        satisfaction, and experience.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Building responsive and efficient websites with clean, maintainable, and scalable code for better
+                        performance.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>User Authentication Solutions</h2>
+                    <p>Implement secure user registration, login, and role-based access control for safe and
+                        personalized e-commerce experiences.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title" style="color:crimson;"><u>Contact me</u></h1>
+                    <p><i class="fa-solid fa-envelope"></i>mahanantham10082002@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>8072508574</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="btnd">
+                        <a href="maha cv.pdf" download class="btn btn2">Download CV</a>
+                    </div>
+
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" placeholder="your name" required name="Name">
+                        <input type="email" placeholder="your email" required name="Email">
+                        <textarea name="text message" placeholder="your message" rows="6"></textarea>
+                        <div class="sub">
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright <i class="fa-solid fa-copyright"></i> Mahanantham N.All rights reserved.</p>
+        </div>
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu() {
+            sidemenu.style.right = "0"
+        }
+        function closemenu() {
+            sidemenu.style.right = "-175px"
+        }
+
+    </script>
+</body>
+
+</html>
