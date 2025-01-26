@@ -16,38 +16,56 @@
 
 <body>
     <div id="header">
-        <div class="container">
-            <nav>
-                <marquee width="30%" direction="horizontal" height="100px">
-                    <h1 style="color: crimson;"> HI </span> <span style="color: crimson;"> WELCOME !</span></h1>
-                </marquee>
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <h2 style="color:black;"><u>FRONTEND DEVELOPER</u></h2>
-                <h1 style="color:black;">Hi I am <span style="color: crimson;">
-                        <!-- <marquee width="60%" direction="up" height="50px">Mahanantham</marquee> -->Mahanantham
-                    </span> <br>from Aceteck.</h1>
-            </div>
+        <div class="container1">
+                <!-- Left Section: Name, Tagline, and Links -->
+                <div id="left-section">
+                    <h2>Mahanantham N</h2>
+                    <p id="tagline">Web Developer | Frontend Developer | Problem Solver</p>
+                    <div id="links">
+                        <a href="https://github.com/Mahanantham" target="_blank" class="social-link">GitHub</a> |
+                        <a href="https://www.linkedin.com/in/mahanantham" target="_blank"
+                            class="social-link">LinkedIn</a> |
+                        <a href="#Contact" class="social-link">Hire Me</a>
+                    </div>
+                </div>
+                
+                <!-- Right Section: Navigation Links -->
+                <nav style="display: flex; justify-content: space-between; align-items: center;">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#project">Projects</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                        <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
         </div>
     </div>
+
+    <script>
+        // JavaScript to change tagline dynamically
+        const taglines = [
+            "Web Developer",
+            "Frontend Developer",
+        ];
+        let taglineIndex = 0;
+
+        setInterval(() => {
+            document.getElementById("tagline").textContent = taglines[taglineIndex];
+            taglineIndex = (taglineIndex + 1) % taglines.length;
+        }, 2000); // Changes every 3 seconds
+    </script>
 
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="maha photo.jpg" alt="">
+                    <img src="images/maha photo.jpg" alt="">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title" style="color:crimson;"><u>About me</u></h1>
-                    <p style="margin-top: 20px;margin-bottom: 20px;"> Hi, I'm Mahanantham N, a passionate frontend
+                    <p style="margin-top:25px;margin-bottom: 30px;"> Hi, I'm Mahanantham N, a passionate frontend
                         developer skilled in HTML, CSS, JavaScript, and React.
                         I enjoy building user-friendly and visually appealing web applications. My goal is to create
                         seamless
@@ -60,73 +78,67 @@
                     <div class="tab-title">
                         <p class="tab-links active-link" onclick="opentab('skills')">SKILLS</p>
                         <p class="tab-links" onclick="opentab('education')">EDUCATION </p>
-                        <p class="tab-links" onclick="opentab('projects')">PROJECTS</p>
-                        <p class="tab-links" onclick="opentab('additional')">ADDITIONAL</p>
+                        <p class="tab-links" onclick="opentab('additional')">CERTIFICATIONS</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>SASS</li>
-                            <li>JAVA SCRIPT</li>
-                            <li>REACT</li>
-                            <li>PYTHON</li>
+                            <li><i class="fab fa-html5 html-icon"></i>HTML</li>
+                            <li><i class="fab fa-css3-alt css-icon"></i>CSS</li>
+                            <li><i class="fab fa-sass sass-icon"></i>SASS</li>
+                            <li><i class="fab fa-bootstrap bootstrap-icon"></i>BOOTSTRAP</li>
+                            <li><i class="fab fa-js-square js-icon"></i>JAVA SCRIPT</li>
+                            <li><i class="fab fa-react react-icon"></i>REACT</li>
+                            <li><i class="fab fa-python python-icon"></i>PYTHON</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2017-2018</span><br>Completed SSLC with 91%</li>
-                            <li><span>2019-2020</span><br>Completed HSC with 65%</li>
-                            <li><span>2020-2024</span><br>Completed B.E with 8.48 CGPA</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="projects">
-                        <ul>
-                            <li><span><u>AUTONOMOUS LAWN MOWER USING GPS</u></span><br>Field by using gps technology
-                                grass are
-                                cutted by lawn mower and vacuuming the cutted grass to be unloaded in a particular
-                                location.</li>
-                            <li><span><u>CLOUD AND FOG COMBINED GATEWAY ACCESS CONTROL FOR SECURE DATA
-                                        DISTRIBUTION</u></span><br>Developed a secure healthcare data sharing system
-                                using ECC
-                                encryption, a duplicate detection mechanism, and a two-server architecture to ensure
-                                privacy, data integrity, and controlled access in the cloud.</li>
-                            <li><span><u>E-COMMERCE PLATFORM WITH USER AUTHENTICATION</u></span><br>A React-based
-                                e-commerce site
-                                featuring user registration, login, product filtering, and a shopping cart. It provides
-                                a
-                                responsive and interactive shopping experience with essential features for online
-                                shopping.</li>
+                            <li class="ed">
+                                <div>Completed SSLC with 91%</div>
+                                <span>--( 2017-2018 )</span>
+                            </li>
+                            <li class="ed">
+                                <div>Completed HSC with 65%</div>
+                                <span>--( 2019-2020 )</span>
+                            </li>
+                            <li class="ed">
+                                <div>Completed B.E with 8.48 CGPA </div>
+                                <span>--( 2020-2024 )</span>
+                            </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="additional">
-                        <ul>
-                            <li>SQL programming with my sql-<span><u>Udemy</u></span>.</li>
-                            <li>Google data analytics course-<span><u>Coursera</u></span></li>
-                        </ul>
+                        <p>SQL programming with my sql-<span> <a href="images/sql certificate.pdf">view
+                                    certificate</a></span>.</p>
+                        <p>Google data analytics course-<span> <a href="images/Coursera.pdf">view certificate</a></span>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="services">
+    <div id="project">
         <div class="container">
-            <h1 class="sub-title" style="color:crimson;"><u>My Services</u></h1>
-            <div class="services-list">
+            <h1 class="sub-title" style="color:crimson;"><u>My Projects</u></h1>
+            <div class="project-list">
                 <div>
-                    <i class="fa-solid fa-link"></i>
-                    <h2>Web Design</h2>
-                    <p>Crafting visually appealing and user-friendly interfaces that enhance user engagement,
-                        satisfaction, and experience.</p>
-                    <a href="#">Learn more</a>
+                    <i class="fa-solid fa-shop"></i>
+                    <h2>E-COMMERCE</h2>
+                    <p>A React-based e-commerce site offering user registration, login, product filters, and a shopping
+                        cart. It delivers a responsive and engaging online shopping experience with essential features..
+                    </p><br>
+                    <button onclick="window.location.href='https://e-commerce-main-2.onrender.com';">Visit Site</button>
                 </div>
                 <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Development</h2>
-                    <p>Building responsive and efficient websites with clean, maintainable, and scalable code for better
-                        performance.</p>
-                    <a href="#">Learn more</a>
+                    <i class="fa-solid fa-earth-europe"></i>
+                    <h2>SOLAR SYSTEM</h2>
+                    <p>A solar system simulation built with HTML, CSS, and JavaScript, featuring planets, a moon, and
+                        randomly
+                        generated stars for an immersive and interactive visual experience, showcasing creative design
+                        skills.</p><br>
+                    <button onclick="window.location.href='https://mahanantham-solarsystem.netlify.app/';">Visit
+                        Site</button>
                 </div>
                 <div>
                     <i class="fa-brands fa-app-store"></i>

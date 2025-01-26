@@ -16,21 +16,118 @@ html {
 
 #header {
     width: 100%;
-    height: 100vh;
-    background-image: url(back2.webp);
-    background-position: center;
-    background-size: cover;
-    background-color: black;
+    height: 30vh;
 }
 
+/* Header Styles */
+#header {
+    padding: 20px 1%;
+    background-color: #262626;
+    color: white;
+}
+
+#left-section {
+    text-align: left;
+}
+
+#left-section h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: crimson;
+    /* Crimson color for name */
+}
+
+#left-section p {
+    font-size: 30px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: darkseagreen;
+    /* Gray for tagline */
+}
+
+#links a {
+    margin-right: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    /* White color for social links */
+}
+
+/* Animation for social buttons (GitHub and LinkedIn) */
+.social-link {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 2px;
+    transition: all 0.3s ease;
+}
+
+.social-link::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 4px;
+    background-color: crimson;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.6s ease;
+}
+
+.social-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#nav {
+    display: flex;
+    list-style: none;
+}
+
+#nav li {
+    margin-left: 40px;
+}
+
+#nav a {
+    color: white;
+    /* White text for navigation links */
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #nav li {
+        margin-left: 0;
+    }
+} */
+
+
 .container {
-    padding: 10px 10%;
+    padding: 10px 5%;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
 }
 
 nav {
     display: flex;
-    text-align: center;
-    justify-content: space-between;
 }
 
 nav ul li {
@@ -44,7 +141,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     position: relative;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 nav ul li a::after {
@@ -62,20 +159,12 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-.header-text {
-    margin-top: 20%;
-    font-size: 30px;
-}
-
-.header-text h1 {
-    font-size: 60px;
-    margin-top: 20px;
-}
 
 #about {
     padding: 80px 0px;
     color: #fff;
 }
+
 
 .row {
     display: flex;
@@ -89,9 +178,11 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 img {
-    width: 100%;
-    border-radius: 15px;
+    width: 80%;
+    height: 100%;
+    border-radius: 20px;
 }
+
 
 .about-col-2 {
     flex-basis: 60%;
@@ -131,7 +222,7 @@ nav ul li a:hover::after {
 }
 
 .tab-links.active-link::after {
-    width: 50%;
+    width: 70%;
 }
 
 .tab-contents ul li {
@@ -150,39 +241,41 @@ nav ul li a:hover::after {
 
 }
 
+
 .tab-contents.active-tab {
     display: block;
     line-height: 30px;
 }
 
-.services-list {
+
+.project-list {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 31% 31% 31%;
     grid-gap: 50px;
     margin-top: 50px;
 }
 
-.services-list div {
+.project-list div {
     background: #262626;
     padding: 40px;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 500;
     border-radius: 20px;
     transition: backgroung 0.5s, transform 0.5s;
 }
 
-.services-list div i {
+.project-list div i {
     font-size: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
-.services-list div h2 {
+.project-list div h2 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.services-list div a {
+.project-list div a {
     text-decoration: none;
     font-size: 13px;
     color: #fff;
@@ -191,8 +284,8 @@ nav ul li a:hover::after {
     text-align: left;
 }
 
-.services-list div:hover {
-    background: #ff004f;
+.project-list div:hover {
+    background: crimson;
     transform: translateY(-10px);
 }
 
@@ -285,8 +378,8 @@ form textarea {
     color: darkgray;
 }
 
-nav .fa-bars,
-nav .fa-circle-xmark {
+nav .fa-solid,
+nav .fa-solid {
     display: none;
 }
 
@@ -296,42 +389,48 @@ nav .fa-circle-xmark {
         margin-top: 100%;
     }
 
-    #header-text h1 {
-        font-size: 14px;
-    }
-
-    #header-text p {
+    #left-section h2 {
         font-size: 18px;
     }
 
-    nav .fa-bars,
-    nav .fa-circle-xmark {
-        display: block;
-        font-size: 25px;
+    #left-section p {
+        font-size: 14px;
     }
+
+    #links a {
+        font-size: 14px;
+
+    }
+
+    nav .fa-solid,
+    nav .fa-solid {
+        display: block;
+        font-size: 18px;
+    }
+
 
     nav ul {
         background: #ff004f;
         position: fixed;
-        padding-top: 50px;
+        padding-top: 60px;
         width: 175px;
         height: 100vh;
         top: 0;
         right: -175px;
         z-index: 2;
-        transition: 0.5s;
+        transition:right 0.9s;
 
     }
 
-    nav ul li {
+    nav .fa-solid{
         display: block;
-        margin: 25px;
-
+        font-size: 18px;
     }
 
-    nav ul .fa-circle-xmark {
+    nav ul .fa-solid {
         top: 25px;
         left: 25px;
+        align-items:center;
         position: absolute;
         cursor: pointer;
     }
@@ -359,11 +458,11 @@ nav .fa-circle-xmark {
         margin-right: 16px;
     }
 
-    .services-list {
+    .project-list {
         grid-template-columns: 1fr;
     }
 
-    .services-list div {
+    .project-list div {
         padding: 15px;
     }
 
@@ -374,5 +473,130 @@ nav .fa-circle-xmark {
 
     .copyright {
         font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+button {
+    background-color: chartreuse;
+    /* Green */
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: chartreuse;
+    /* Slightly darker green */
+    transform: scale(1.05);
+    /* Slight zoom-in effect */
+}
+
+button:active {
+    background-color: #3e8e41;
+    /* Even darker green for click */
+    transform: scale(1);
+    /* Reset zoom on click */
+}
+
+
+body {
+    background-color: #121212;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 18px;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* Icon colors */
+.html-icon {
+    color: #00bcd4;
+}
+
+.css-icon {
+    color: #2965f1;
+}
+
+.sass-icon {
+    color: #cf649a;
+}
+
+.bootstrap-icon {
+    color: #563d7c;
+}
+
+.js-icon {
+    color: #f7df1e;
+}
+
+.react-icon {
+    color: #61dafb;
+}
+
+.python-icon {
+    color: #3776ab;
+}
+
+i {
+    margin-right: 15px;
+}
+
+/* Hover effect for text */
+li:hover {
+    color: #ff6f61;
+    transform: translateY(-5px);
+}
+
+/* Hover effect for icons */
+li:hover .html-icon,
+li:hover .css-icon,
+li:hover .sass-icon,
+li:hover .bootstrap-icon,
+li:hover .js-icon,
+li:hover .react-icon,
+li:hover .python-icon {
+    transform: scale(1.2);
+    /* Slightly increase icon size */
+}
+
+/* Bounce Animation for icons */
+li:hover i {
+    animation: bounce 0.6s ease;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* Moves icon up */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Resets to original position */
     }
 }
