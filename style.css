@@ -97,22 +97,8 @@ html {
     text-decoration: none;
 }
 
-/* @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
-    #nav {
-        margin-top: 10px;
-        flex-direction: column;
-        gap: 10px;
-    }
 
-    #nav li {
-        margin-left: 0;
-    }
-} */
 
 
 .container {
@@ -383,7 +369,7 @@ nav .fa-solid {
     display: none;
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:900px) {
     #header-text {
         font-size: 20px;
         margin-top: 100%;
@@ -600,3 +586,5 @@ li:hover i {
         /* Resets to original position */
     }
 }
+
+
