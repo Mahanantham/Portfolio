@@ -318,7 +318,7 @@ nav ul li a:hover::after {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    color: #fff;
+    color:black;
     background-color: #ff004f;
     border: none;
     border-radius: 5px;
@@ -469,8 +469,36 @@ nav .fa-solid {
 
 
 
+.ed{
+    padding: 8px;
+}
+.cer{
+    padding: 8px;
+}
+
+.cert {
+    padding: 0.60rem 0.5rem;
+    background-color:lightseagreen;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+  }
+
+  .cert:hover {
+    background-color:crimson;
+    color: white;
+  }
+  
+
+
+
+
+
+
+
+
 button {
-    background-color: chartreuse;
+    background-color: lightseagreen;
     /* Green */
     color: black;
     border: none;
@@ -482,7 +510,7 @@ button {
 }
 
 button:hover {
-    background-color: chartreuse;
+    background-color:darkkhaki;
     /* Slightly darker green */
     transform: scale(1.05);
     /* Slight zoom-in effect */
