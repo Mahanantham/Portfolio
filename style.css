@@ -1,6 +1,6 @@
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -17,10 +17,6 @@ html {
 #header {
     width: 100%;
     height: 30vh;
-}
-
-/* Header Styles */
-#header {
     padding: 20px 1%;
     background-color: #262626;
     color: white;
@@ -35,7 +31,6 @@ html {
     font-weight: bold;
     margin-bottom: 15px;
     color: crimson;
-    /* Crimson color for name */
 }
 
 #left-section p {
@@ -43,7 +38,6 @@ html {
     margin-top: 15px;
     font-weight: bold;
     color: darkseagreen;
-    /* Gray for tagline */
 }
 
 #links a {
@@ -51,10 +45,8 @@ html {
     font-size: 25px;
     text-decoration: none;
     color: white;
-    /* White color for social links */
 }
 
-/* Animation for social buttons (GitHub and LinkedIn) */
 .social-link {
     position: relative;
     display: inline-block;
@@ -92,14 +84,9 @@ html {
 
 #nav a {
     color: white;
-    /* White text for navigation links */
     font-size: 20px;
     text-decoration: none;
 }
-
-
-
-
 
 .container {
     padding: 10px 5%;
@@ -120,7 +107,6 @@ nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
-
 }
 
 nav ul li a {
@@ -145,12 +131,10 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-
 #about {
-    padding: 80px 0px;
+    padding: 80px 0;
     color: #fff;
 }
-
 
 .row {
     display: flex;
@@ -169,10 +153,8 @@ nav ul li a:hover::after {
     border-radius: 20px;
 }
 
-
 .about-col-2 {
     flex-basis: 60%;
-
 }
 
 .sub-title {
@@ -183,8 +165,7 @@ nav ul li a:hover::after {
 
 .tab-title {
     display: flex;
-    margin: 20px 0px;
-
+    margin: 20px 0;
 }
 
 .tab-links {
@@ -214,7 +195,6 @@ nav ul li a:hover::after {
 .tab-contents ul li {
     list-style: none;
     margin: 10px 0;
-
 }
 
 .tab-contents ul li span {
@@ -224,30 +204,27 @@ nav ul li a:hover::after {
 
 .tab-contents {
     display: none;
-
 }
-
 
 .tab-contents.active-tab {
     display: block;
     line-height: 30px;
 }
 
-
 .project-list {
     display: grid;
-    grid-template-columns: 31% 31% 31%;
-    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 50px;
     margin-top: 50px;
 }
 
 .project-list div {
     background: #262626;
     padding: 40px;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 500;
     border-radius: 20px;
-    transition: backgroung 0.5s, transform 0.5s;
+    transition: background 0.5s, transform 0.5s;
 }
 
 .project-list div i {
@@ -263,7 +240,7 @@ nav ul li a:hover::after {
 
 .project-list div a {
     text-decoration: none;
-    font-size: 13px;
+    font-size: 16px;
     color: #fff;
     margin: 20px 0;
     display: inline-block;
@@ -302,7 +279,7 @@ nav ul li a:hover::after {
     font-size: 30px;
     color: rgb(66, 19, 166);
     display: inline-block;
-    transistion: transform 0.5s;
+    transition: transform 0.5s;
 }
 
 .social-icons a:hover {
@@ -318,7 +295,7 @@ nav ul li a:hover::after {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    color:black;
+    color: black;
     background-color: #ff004f;
     border: none;
     border-radius: 5px;
@@ -364,142 +341,30 @@ form textarea {
     color: darkgray;
 }
 
-nav .fa-solid,
 nav .fa-solid {
     display: none;
 }
 
-@media only screen and (max-width:900px) {
-    #header-text {
-        font-size: 20px;
-        margin-top: 100%;
-    }
-
-    #left-section h2 {
-        font-size: 18px;
-    }
-
-    #left-section p {
-        font-size: 14px;
-    }
-
-    #links a {
-        font-size: 14px;
-
-    }
-
-    nav .fa-solid,
-    nav .fa-solid {
-        display: block;
-        font-size: 18px;
-    }
-
-
-    nav ul {
-        background: #ff004f;
-        position: fixed;
-        padding-top: 60px;
-        width: 175px;
-        height: 100vh;
-        top: 0;
-        right: -175px;
-        z-index: 2;
-        transition:right 0.9s;
-
-    }
-
-    nav .fa-solid{
-        display: block;
-        font-size: 18px;
-    }
-
-    nav ul .fa-solid {
-        top: 25px;
-        left: 25px;
-        align-items:center;
-        position: absolute;
-        cursor: pointer;
-    }
-
-    .sub-title {
-        font-size: 40px;
-    }
-
-    .about-col-1,
-    .about-col-2 {
-        flex-basis: 100%;
-    }
-
-    .about-col-1 {
-        margin-bottom: 25px;
-    }
-
-    .about-col-2 {
-        font-size: 10px;
-        /* padding: 20px; */
-    }
-
-    .tab-links {
-        font-size: 11px;
-        margin-right: 16px;
-    }
-
-    .project-list {
-        grid-template-columns: 1fr;
-    }
-
-    .project-list div {
-        padding: 15px;
-    }
-
-    .contact-left,
-    .contact-right {
-        flex-basis: 100%;
-    }
-
-    .copyright {
-        font-size: 14px;
-    }
-}
-
-
-
-
-
-
-
-
-.ed{
-    padding: 8px;
-}
-.cer{
-    padding: 8px;
-}
-
+/* Cert Button Styles */
 .cert {
-    padding: 0.60rem 0.5rem;
-    background-color:lightseagreen;
+    padding: 0.6rem 1rem;
+    background-color: lightseagreen;
     color: black;
     text-decoration: none;
     border-radius: 10px;
-  }
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 16px;
+}
 
-  .cert:hover {
-    background-color:crimson;
+.cert:hover {
+    background-color: crimson;
     color: white;
-  }
-  
+}
 
-
-
-
-
-
-
-
+/* Button Styles */
 button {
     background-color: lightseagreen;
-    /* Green */
     color: black;
     border: none;
     padding: 10px 20px;
@@ -510,39 +375,16 @@ button {
 }
 
 button:hover {
-    background-color:darkkhaki;
-    /* Slightly darker green */
+    background-color: darkkhaki;
     transform: scale(1.05);
-    /* Slight zoom-in effect */
 }
 
 button:active {
     background-color: #3e8e41;
-    /* Even darker green for click */
     transform: scale(1);
-    /* Reset zoom on click */
 }
 
-
-body {
-    background-color: #121212;
-    color: white;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    font-size: 18px;
-    margin: 8px 0;
-    display: flex;
-    align-items: center;
-    transition: transform 0.3s ease;
-}
-
-/* Icon colors */
+/* Skills Section Icons */
 .html-icon {
     color: #00bcd4;
 }
@@ -575,13 +417,11 @@ i {
     margin-right: 15px;
 }
 
-/* Hover effect for text */
 li:hover {
     color: #ff6f61;
     transform: translateY(-5px);
 }
 
-/* Hover effect for icons */
 li:hover .html-icon,
 li:hover .css-icon,
 li:hover .sass-icon,
@@ -590,29 +430,218 @@ li:hover .js-icon,
 li:hover .react-icon,
 li:hover .python-icon {
     transform: scale(1.2);
-    /* Slightly increase icon size */
 }
 
-/* Bounce Animation for icons */
 li:hover i {
     animation: bounce 0.6s ease;
 }
 
-/* Bounce Animation */
 @keyframes bounce {
     0% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-10px);
-        /* Moves icon up */
     }
-
     100% {
         transform: translateY(0);
-        /* Resets to original position */
+    }
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 900px) {
+    #header {
+        height: auto;
+    }
+
+    #left-section h2 {
+        font-size: 30px;
+    }
+
+    #left-section p {
+        font-size: 20px;
+    }
+
+    #links a {
+        font-size: 18px;
+    }
+
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        padding-top: 60px;
+        width: 175px;
+        height: 100vh;
+        top: 0;
+        right: -175px;
+        z-index: 2;
+        transition: right 0.9s;
+    }
+
+    nav ul .fa-solid {
+        top: 25px;
+        left: 25px;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 25px;
+    }
+
+    .about-col-2 {
+        font-size: 16px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    .project-list div {
+        padding: 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .copyright {
+        font-size: 16px;
+    }
+
+    .cert {
+        padding: 0.5rem 1rem;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #left-section h2 {
+        font-size: 24px;
+    }
+
+    #left-section p {
+        font-size: 16px;
+    }
+
+    #links a {
+        font-size: 14px;
+    }
+
+    .sub-title {
+        font-size: 30px;
+    }
+
+    .tab-links {
+        font-size: 14px;
+    }
+
+    .project-list div {
+        padding: 15px;
+    }
+
+    .cert {
+        padding: 0.4rem 0.8rem;
+        font-size: 12px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
     }
 }
 
 
+/* responsive fot he right and the left side of the screen */
+/* Mobile Menu Styles */
+nav .fa-solid {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+@media only screen and (max-width: 900px) {
+    nav .fa-solid {
+        display: block;
+    }
+
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -175px; /* Hide menu off-screen by default */
+        width: 175px;
+        height: 100vh;
+        padding-top: 60px;
+        z-index: 2;
+        transition: right 0.5s ease;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    /* Show menu when open */
+    nav ul.active {
+        right: 0;
+    }
+}
+
+
+
+/* button color */
+/* Project Section Button Styles */
+.project-list div button {
+    background-color: crimson; /* Red background for buttons */
+    color: white; /* White text for buttons */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-list div button:hover {
+    background-color: #262626; /* Slightly lighter red on hover */
+    transform: scale(1.05); /* Slight zoom-in effect */
+   border-width:5px;
+    border: solid,2px;
+}
+
+.project-list div button:active {
+    background-color: #b30036; /* Darker red for click effect */
+    transform: scale(1); /* Reset zoom on click */
+    border:black;
+    border-style: double;
+    border: solid;
+}
