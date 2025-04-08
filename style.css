@@ -393,10 +393,6 @@ button:active {
     color: #2965f1;
 }
 
-.sass-icon {
-    color: #cf649a;
-}
-
 .bootstrap-icon {
     color: #563d7c;
 }
@@ -413,6 +409,14 @@ button:active {
     color: #3776ab;
 }
 
+.django-icon {
+    color: #092e20; /* Django green-black */
+}
+
+.sql-icon {
+    color: #f29111; /* SQL orange tone */
+}
+
 i {
     margin-right: 15px;
 }
@@ -424,11 +428,12 @@ li:hover {
 
 li:hover .html-icon,
 li:hover .css-icon,
-li:hover .sass-icon,
 li:hover .bootstrap-icon,
 li:hover .js-icon,
 li:hover .react-icon,
-li:hover .python-icon {
+li:hover .python-icon,
+li:hover .django-icon,
+li:hover .sql-icon {
     transform: scale(1.2);
 }
 
@@ -447,6 +452,7 @@ li:hover i {
         transform: translateY(0);
     }
 }
+
 
 /* Mobile Responsiveness */
 @media only screen and (max-width: 900px) {
